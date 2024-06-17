@@ -75,6 +75,22 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
   // Add your code here!
+  console.log("Let's get ready to party with jQuery!");
+  $('article').addClass('image-center');
+  $('p').eq(5).remove();
+  $('h1').css('font-size', '80px');
+  $('ol').append('<li>Adding a new li!</li>');
+  $('aside').children().remove();
+  $('aside').append('<p>Sorry there was ever a list here. That was silly of me :(</p>');
+  $('.form-control').on('keyup blur change', function() { //needed to view solution for this part because my method wasn't working...still isn't working after viewing solution either
+    let red = $('.form-control').eq(0).val();
+    let green = $('.form-control').eq(2).val();
+    let blue = $('.form-control').eq(1).val();
+    $('body').css('background-color', "rgb(" + red + "," + green + "," + blue + ")");
+  });
+  $('img').on("click", function() {
+    $(this).remove();
+  });
 </script>
 </body>
 
